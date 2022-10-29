@@ -73,10 +73,10 @@ local function attach_navic(client, bufnr)
   if not status_ok then
     return
   end
-  -- if client.server_capabilities.documentSymbolProvider then
+  if client.server_capabilities.documentSymbolProvider then
     navic.attach(client, bufnr)
     print("navic is ok")
-  -- end
+  end
 end
 
 local function lsp_keymaps(bufnr)
