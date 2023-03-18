@@ -2,6 +2,7 @@
   "window.zoomLevel": 0.75,
   "workbench.tree.indent": 15,
   "workbench.startupEditor": "none",
+  // 強制打開新 tab
   "workbench.editor.enablePreview": false,
   "editor.fontFamily": "Inconsolata, JetBrainsMono Nerd Font",
   "editor.fontLigatures": false,
@@ -33,7 +34,14 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue"
+  ],
   // spellCheck settings
   "cSpell.enabled": true,
   "cSpell.numSuggestions": 10,
@@ -95,6 +103,14 @@
     {
       "before": ["<leader>", "r"],
       "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["c-r"],
+      "commands": ["redo"]
     }
   ],
   // "bracketPairColorizer.depreciation-notice": false,
