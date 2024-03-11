@@ -1,7 +1,7 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
+# Platform built on V8 to build network applications
+brew "node"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Distributed revision control system
@@ -20,6 +20,8 @@ brew "stow"
 brew "tmux"
 # Application uninstaller
 cask "appcleaner"
+# Desktop password and login vault
+cask "bitwarden"
 # Voice and text chat software
 cask "discord"
 # Web browser
@@ -33,5 +35,41 @@ cask "iterm2"
 cask "mos"
 # Collaboration platform for API development
 cask "postman"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Team communication and collaboration software
+cask "slack"
 # Graphical client for Git version control
 cask "sourcetree"
+# JavaScript IDE
+cask "webstorm"
+vscode "angular.ng-template"
+vscode "coenraads.bracket-pair-colorizer"
+vscode "cyrilletuzi.angular-schematics"
+vscode "davidbabel.vscode-simpler-icons"
+vscode "dbaeumer.vscode-eslint"
+vscode "doggy8088.angular-extension-pack"
+vscode "doggy8088.quicktype-refresh"
+vscode "donjayamanne.githistory"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "gerane.theme-blackboard"
+vscode "gerane.theme-flatlandblack"
+vscode "gruntfuggly.todo-tree"
+vscode "infinity1207.angular2-switcher"
+vscode "johnpapa.angular2"
+vscode "krizzdewizz.refactorix"
+vscode "mikael.angular-beastcode"
+vscode "nhoizey.gremlins"
+vscode "nrwl.angular-console"
+vscode "octref.vetur"
+vscode "oouo-diogo-perdigao.docthis"
+vscode "patbenatar.advanced-new-file"
+vscode "pranaygp.vscode-css-peek"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "styled-components.vscode-styled-components"
+vscode "vscodevim.vim"
+vscode "vue.volar"
+vscode "xabikos.javascriptsnippets"
+vscode "zamerick.black-ocean"
