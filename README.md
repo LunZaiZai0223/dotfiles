@@ -37,7 +37,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 同步 `tmux` 環境：
 ```bash
 # type this in terminal if tmux is already running
-tmux source ~/.tmux.conf
+:source-file ~/.tmux.conf
 ```
 
 裝完 `tmux` 按下 prefix + I 即可安裝 tmux 套件
@@ -60,6 +60,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ### Step 9: 下載 `zsh` 的套件
 
 ```bash
+# download zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# download zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 source ~/.zshrc
 ```
 
