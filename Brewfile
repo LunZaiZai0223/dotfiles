@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-# Platform built on V8 to build network applications
-brew "node"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Distributed revision control system

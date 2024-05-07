@@ -1,6 +1,8 @@
 \.git
 misc
 LICENSE
+Brewfile
+custim-vm-option
 ^/.*\.org
 .DS_Store
 *.md
