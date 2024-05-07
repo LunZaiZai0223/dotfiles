@@ -1,4 +1,4 @@
-# dotfile
+# dotfiles
 
 ## 拿到新電腦後該如何快速建立舊有的開發環境
 
@@ -9,9 +9,6 @@
 > 可以參考 [[NodeJS] 透過 NVM 安裝與使用 Node.js](https://pjchender.dev/nodejs/nvm/)
 
 ### Step 3: `clone` 本 repo 至本機端
-
-> `git clone repo ~/.dotfiles`
-> clone repo 至 `~/.dotfiles`
 
 ### Step 4: 下載 `stow`
 
@@ -27,7 +24,22 @@
 或者 `brew bundle install`
 （但這個指令會需要 `Brewfile` 在以下 path: `~/Brewfile`）
 
-### Step 6: 下載 `tmux` 套件
+### Step 6: 手動更改 cloned 後的 repo 為隱藏資料夾
+
+### Step 7: 將設定檔透過 `stow` symlink 至根目錄
+
+```bash
+# 先移動至 cloned 後的 repo (.dotfiles)
+cd ~/.dotfile
+
+# 透過 stow symlink 設定檔案
+stow */
+
+# 單獨/多個 symlink
+stow a b c ...
+```
+
+### Step 8: 下載 `tmux` 套件
 
 先執行取得 `tpm` 套件管理：
 ```bash
@@ -42,14 +54,14 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 裝完 `tmux` 按下 prefix + I 即可安裝 tmux 套件
 
-### Step 7: 下載 `oh-my-zsh`
+### Step 9: 下載 `oh-my-zsh`
 
 ```bash
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 ```
 
-### Step 8: 下載 `powerlevel10k`
+### Step 10: 下載 `powerlevel10k`
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -57,7 +69,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 因為有 `.p10k.zsh` 所以下載後不需要額外設定。
 
-### Step 9: 下載 `zsh` 的套件
+### Step 11: 下載 `zsh` 的套件
 
 ```bash
 # download zsh-syntax-highlighting
