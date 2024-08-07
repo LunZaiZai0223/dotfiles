@@ -48,6 +48,10 @@
   "cSpell.ignoreWords": ["swiper"],
   // Vim
   "vim.easymotion": true,
+  "vim.easymotionMarkerBackgroundColor": "#FBD87F",
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.easymotionMarkerForegroundColorOneChar": "#DE0079",
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
@@ -111,6 +115,10 @@
     {
       "before": ["c-r"],
       "commands": ["redo"]
+    },
+    {
+      "before": [" "],
+      "after": ["leader", "leader" , "s"]
     }
   ],
   // "bracketPairColorizer.depreciation-notice": false,
