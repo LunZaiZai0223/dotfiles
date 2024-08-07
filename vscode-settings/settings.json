@@ -80,7 +80,11 @@
     // Improving the file explorer usage
     {
       "before": ["<C-t>"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<C-c>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
     },
     {
       "before": ["<leader>", "n"],
