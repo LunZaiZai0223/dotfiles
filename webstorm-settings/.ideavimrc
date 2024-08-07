@@ -29,6 +29,7 @@ let mapleader=" "
 set commentary
 set surround
 set NERDTree
+set easymotion
 
 " -- idea specific settings --
 set ideajoin
@@ -62,8 +63,11 @@ nnoremap ,s :action FileStructurePopup<CR>
 map <C-t> :NERDTree<CR>
 map <C-c> :NERDTreeClose<CR>
 map <C-z> :NERDTreeFind<CR>
+map <leader>ss <Plug>(easymotion-s)
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
