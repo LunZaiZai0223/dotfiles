@@ -75,7 +75,7 @@
     },
     // Improving the file explorer usage
     {
-      "before": ["<leader>", "t"],
+      "before": ["<C-t>"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
@@ -92,11 +92,11 @@
     },
     // switch windows
     {
-      "before": ["<leader>", "]"],
+      "before": ["<S-l>"],
       "commands": ["workbench.action.nextEditor"]
     },
     {
-      "before": ["<leader>", "["],
+      "before": ["<S-h>"],
       "commands": ["workbench.action.previousEditor"]
     },
     // Rename
