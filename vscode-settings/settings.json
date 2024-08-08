@@ -139,6 +139,10 @@
     {
       "before": ["[", "c"],
       "commands": ["workbench.action.editor.previousChange"]
+    },
+    {
+      "before": ["<leader>", "d", "e", "l", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
     }
   ],
   // "bracketPairColorizer.depreciation-notice": false,
