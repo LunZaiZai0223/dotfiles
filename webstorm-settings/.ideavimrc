@@ -41,11 +41,11 @@ set ideamarks
 " -- keymappings
 nmap <S-l> <action>(NextTab)
 nmap <S-h> <action>(PreviousTab)
-nmap <leader>e <action>(ShowErrorDescription)
+nmap <leader>cd <action>(ShowErrorDescription)
 nmap <leader>r <action>(RenameElement)
 nmap <leader>p :action ShowFilePath<CR>
 nmap <C-p> <action>(GotoFile)
-nnoremap <leader>fg :action FindInPath<CR>
+nnoremap <leader>sg :action FindInPath<CR>
 nnoremap gD :action QuickImplementations<CR>
 nmap ]d <action>(GotoNextError)
 nmap [d <action>(GotoPreviousError)
@@ -60,7 +60,7 @@ nmap delo <action>(CloseAllEditorsButActive)
 xnoremap p "_dP
 nnoremap ,s :action FileStructurePopup<CR>
 
-map <C-t> :NERDTree<CR>
+map <leader>e :NERDTree<CR>
 map <C-c> :NERDTreeClose<CR>
 map <C-z> :NERDTreeFind<CR>
 map <leader>ss <Plug>(easymotion-s)
