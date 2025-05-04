@@ -30,6 +30,7 @@ set commentary
 set surround
 set NERDTree
 set easymotion
+set highlightedyank
 
 " -- idea specific settings --
 set ideajoin
@@ -44,16 +45,21 @@ nmap <S-h> <action>(PreviousTab)
 nmap <leader>cd <action>(ShowErrorDescription)
 nmap <leader>r <action>(RenameElement)
 nmap <leader>p :action ShowFilePath<CR>
-nmap <C-p> <action>(GotoFile)
+nmap <leader>ff <action>(GotoFile)
 nnoremap <leader>sg :action FindInPath<CR>
 nnoremap gD :action QuickImplementations<CR>
 nmap ]d <action>(GotoNextError)
 nmap [d <action>(GotoPreviousError)
 nmap gh <action>(RecentFiles)
+" remove d and c from the default yank register
+nnoremap d "_d
+vnoremap d "_d
+nnoremap c "_c
+vnoremap c "_c
 
 " Keys from vim-gitgutter
-nmap ]c <Action>(VcsShowNextChangeMarker)
-nmap [c <Action>(VcsShowPrevChangeMarker)
+nmap ]h <Action>(VcsShowNextChangeMarker)
+nmap [h <Action>(VcsShowPrevChangeMarker)
 
 nmap <leader>u <action>(ShowUsages)
 nmap delo <action>(CloseAllEditorsButActive)
