@@ -30,6 +30,7 @@ set commentary
 set surround
 set NERDTree
 set easymotion
+set notimeout
 set highlightedyank
 
 " -- idea specific settings --
@@ -38,24 +39,37 @@ set ideastatusicon=gray
 set idearefactormode=keep
 " Map vim marks to IDEA global marks
 set ideamarks
+set which-key
 
 " -- keymappings
 nmap <S-l> <action>(NextTab)
 nmap <S-h> <action>(PreviousTab)
 nmap <leader>cd <action>(ShowErrorDescription)
-nmap <leader>r <action>(RenameElement)
+nmap <leader>cr <action>(RenameElement)
 nmap <leader>p :action ShowFilePath<CR>
 nmap <leader>ff <action>(GotoFile)
 nnoremap <leader>sg :action FindInPath<CR>
 nnoremap gD :action QuickImplementations<CR>
 nmap ]d <action>(GotoNextError)
 nmap [d <action>(GotoPreviousError)
-nmap gh <action>(RecentFiles)
-" remove d and c from the default yank register
-nnoremap d "_d
-vnoremap d "_d
-nnoremap c "_c
-vnoremap c "_c
+nmap <leader>fg <action>(RecentFiles)
+" Folding
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+" Navigation bar
+nmap <leader>nb <Action>(ShowNavBar)
+" Git windows
+map <leader>gc <Action>(CheckinProject)
+map <leader>gs <Action>(ActivateVersionControlToolWindow)
+map <leader>gb <Action>(Git.Branches)
+nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>gd <Action>(Compare.SameVersion)
+map <leader>fl <action>(RecentLocations)
+" Popup navigation
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+" Close active tab
+map <leader>q <action>(CloseContent)
 
 " Keys from vim-gitgutter
 nmap ]h <Action>(VcsShowNextChangeMarker)
@@ -74,6 +88,46 @@ let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
+
+let g:WhichKey_FontSize = 16
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+let g:WhichKeyDesc_leader = "<leader> Leader key"
+let g:WhichKeyDesc_leader = "<leader>e Open file explorer"
+
+let g:WhichKeyDesc_code_action = "<leader>c Code action"
+let g:WhichKeyDesc_code_action = "<leader>cd Display diagnostics"
+
+let g:WhichKeyDesc_fold = "<leader>z Folding"
+let g:WhichKeyDesc_fold_all = "<leader>zc Fold all regions"
+let g:WhichKeyDesc_unfold_all = "<leader>zo Unfold all regions"
+
+let g:WhichKeyDesc_search_every_where = "<leader>sg Search every where"
+
+let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
+let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
+let g:WhichKeyDesc_file_nav_goto_content = "<leader>fc Search for file content"
+let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fg Show recent files"
+let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent locations"
+
+let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
+
+"到這裡
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
+let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
+
+let g:WhichKeyDesc_git = "<leader>g Git operations"
+let g:WhichKeyDesc_git_commit = "<leader>gc Open Git commit dialog"
+let g:WhichKeyDesc_git_status = "<leader>gs Open Git status dialog"
+let g:WhichKeyDesc_git_branches = "<leader>gb Open Git branches list"
+let g:WhichKeyDesc_git_diff = "<leader>gd Open Git current file diff"
+let g:WhichKeyDesc_git_history = "<leader>gh Open Git current file history"
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
