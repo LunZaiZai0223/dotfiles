@@ -70,6 +70,8 @@ inoremap <C-j> <Action>(PopupMenu-selectNext)
 inoremap <C-k> <Action>(PopupMenu-selectPrev)
 " Close active tab
 map <leader>q <action>(CloseContent)
+" Refactoring
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Keys from vim-gitgutter
 nmap ]h <Action>(VcsShowNextChangeMarker)
@@ -113,13 +115,7 @@ let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent loca
 
 let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
 
-"到這裡
 let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
-let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
-let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
-let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
-let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
-let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
 let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
 
 let g:WhichKeyDesc_git = "<leader>g Git operations"
