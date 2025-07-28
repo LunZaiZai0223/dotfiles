@@ -80,6 +80,9 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 map <leader>x <Action>(ActivateProblemsViewToolWindow)
 nmap <leader>q <Action>(HideActiveWindow)
 
+nmap <leader>tt <Action>(ActivateTerminalToolWindow)
+nmap <leader>tc <Action>(com.anthropic.code.plugin.actions.OpenClaudeInTerminalAction)
+
 " Keys from vim-gitgutter
 nmap ]h <Action>(VcsShowNextChangeMarker)
 nmap [h <Action>(VcsShowPrevChangeMarker)
@@ -107,6 +110,10 @@ let g:WhichKeyDesc_leader = "<leader>e Open file explorer"
 
 let g:WhichKeyDesc_code_action = "<leader>c Code action"
 let g:WhichKeyDesc_code_action = "<leader>cd Display diagnostics"
+
+let g:WhichKeyDesc_terminal = "<leader>t Terminal"
+let g:WhichKeyDesc_terminal_activate = "<leader>tt Open terminal"
+let g:WhichKeyDesc_terminal_claude_code = "<leader>tc Open claude code in terminal"
 
 let g:WhichKeyDesc_fold = "<leader>z Folding"
 let g:WhichKeyDesc_fold_all = "<leader>zc Fold all regions"
